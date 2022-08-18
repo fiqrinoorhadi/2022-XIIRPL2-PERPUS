@@ -18,17 +18,22 @@ if (isset($_POST['login_form'])) //'login_form' dari name tombol loginnya
     $data = mysqli_num_rows($select);
     if ($data > 0) 
     {
-        if (password_verify($password,$row['password'])) {
+        if (password_verify($password,$row['password'])) 
+        {
             ?>
             <script>
                 alert('Anda Berhasil Login');
                 location.href='http://localhost/01-perpus-fiqri/';
             </script>
             <?php
-        }else{
+        }
+        else
+        {
             echo "password anda salah";
         }
-    }else{
+    }
+    else
+    {
         ?>
             <script>
                 alert('Username/Password anda salah!!');
